@@ -6,6 +6,7 @@ namespace TextMethods
     {
         static void Main(string[] args)
         {
+            // test PascalCase()
             Console.WriteLine(UsefulTextUtils.PascalCase("NUMBER OF STUDENTS"));   
             
         }
