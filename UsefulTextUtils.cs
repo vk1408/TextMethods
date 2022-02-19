@@ -26,5 +26,26 @@ class UsefulTextUtils
         return pascalCase;
 
     }
+    public static Boolean CheckTimeFormat(string input)
+    {
+        //    A valid input should be between 00:00 and 23:59.
+        //    If the input is valid, returns true, otherwise, 
+        //    returns false. If the input is empty, returns false.
+
+        if (String.IsNullOrEmpty(input))
+        {
+            return false;
+        }
+
+        var input_spl = input.Split(':');
+
+        var hour = Convert.ToInt32(input_spl[0]);
+        var minute = Convert.ToInt32(input_spl[1]);
+
+        if ((hour >= 0) && (hour <= 23) && (minute >= 0) && (minute <= 59))
+            return true;
+        else
+            return false;
+    }
 }
 
